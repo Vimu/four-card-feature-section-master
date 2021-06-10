@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+:root{
+    --Red: hsl(0, 78%, 62%);
+    --Cyan: hsl(180, 62%, 55%);
+    --Orange: hsl(34, 97%, 64%);
+    --Blue: hsl(212, 86%, 64%);
+    --Very-Dark-Blue: hsl(234, 12%, 34%);
+    --Grayish-Blue: hsl(229, 6%, 66%);
+    --Very-Light-Gray: hsl(0, 0%, 98%);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+}
+.container{
+    padding: 50px 20px;
+    background-color: var(--Very-Light-Gray);
+}
+.container .head{
+    margin: 0 auto;
+    text-align: center;
+    justify-content: center;
+    color: var(--Very-Dark-Blue);
+}
+.container .head h1{
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: var(--Grayish-Blue); 
+}
+.container .head h2{
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.container .head p{
+    text-align: center;
+    margin:0 auto;
+    font-weight: 200;
+    max-width: 350px;
+    font-size: 0.9rem;
+    color: var(--Grayish-Blue);
+}
+.cards{
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    color: var(--Very-Dark-Blue);
+}
+.cards .card{
+    box-shadow: 2px 8px 14px 0px hsl(233deg 10% 66% / 42%);
+    max-width: 400px;
+    padding: 30px;
+    margin: 0 auto 2rem;
+    border-radius: 8px;
+}
+.cards .card p{
+    padding: 5px 0;
+    font-weight: 200;
+    font-size: 0.8rem;
+}
+.cards .card.supervisor{
+    border-top: 5px solid var(--Cyan);
+}
+.cards .card.team{
+    border-top: 5px solid var(--Red);
+}
+.cards .card.karma{
+   border-top: 5px solid var(--Orange); 
+}
+.cards .card.cal{
+    border-top: 5px solid var(--Blue);
+}
+.cards .card img{
+    display: block;
+    margin-left: auto;
+    margin-top: 30px;
+}
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+/* Desktop View */
+@media only screen and (min-width:1200px){
+    .container .head{
+        margin-bottom: 40px;
+    }
+    .container .head h1{
+        font-size: 2.5rem;
+    }
+    .container .head h2{
+        font-size: 2.5rem;
+    }
+    .container .head p{
+        font-size: 1.2rem;
+        max-width: 600px;
+    }
+    .container .cards{
+        max-width: 1200px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        min-height: 400px;
+        grid-row-gap: 30px;
+        grid-column-gap: 30px;
+        margin: 0 auto;
+    }
+    .container .card{
+        min-height: 200px;
+    }
+    .container .cards .card.supervisor{
+        grid-area: 1/1/3/2;
+        align-self: center;
+        margin: 0;
+    }
+    .container .cards .card.team{
+        grid-area: 1/2/2/3;
+        margin: 0;
+    }
+    .container .cards .card.karma{
+        grid-area: 2/2/3/3;
+        margin: 0;
+    }
+    .container .cards .card.cal{
+        grid-area: 1/3/3/4;
+        align-self: center;
+        margin: 0;
+    }
+    .cards .card h3{
+        font-size: 1.5rem;
+        font-weight: 400;
+    }
+    .cards .card p{
+        font-size: 1rem;
+    }
+}
